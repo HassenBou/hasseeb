@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Salaire et Taxes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <img src="img/hasseebapplogo.svg" alt="Logo" class="logo">
+        <h1>Calculatrice Salaire et Taxes</h1>
+        
+        <!-- Sélection du type de calcul -->
+        <div class="form-group">
+            <label for="calculationType">Type de calcul :</label>
+            <select id="calculationType">
+                <option value="brut">Calculer à partir du Salaire Brut</option>
+                <option value="net">Calculer à partir du Salaire Net</option>
+                <option value="chiffreAffaires">Calculer à partir du Chiffre d'Affaires du projet</option>
+            </select>
+        </div>
+        
+        <!-- Champ pour Montant -->
+        <div class="form-group" id="amountGroup">
+            <label for="amount">Montant (DT) :</label>
+            <input type="number" id="amount" placeholder="Entrez le montant">
+        </div>
+
+        <!-- Champ pour Chiffre d'Affaires (visible uniquement lorsque "Chiffre d'Affaires" est sélectionné) -->
+        <div class="form-group" id="chiffreAffairesGroup" style="display:none;">
+            <label for="chiffreAffaires">Chiffre d'Affaires du Projet (DT) :</label>
+            <input type="number" id="chiffreAffaires" placeholder="Entrez le Chiffre d'Affaires">
+        </div>
+
+        <button onclick="calculate()">Calculer</button>
+        
+        <div class="result" id="result">
+            <!-- Les résultats s'afficheront ici -->
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h1>Solutions Personnalisées?</h1>
+        <p>Des calculs simples aux plus complexes, nous vous fournissons la solution adaptée.</p>
+        <button class="contact-btn">Contactez-nous</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Hasseeb | حسيــب. Tous droits réservés.</p>
+        <p>Powered by <strong>Hasseeb App</strong></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
